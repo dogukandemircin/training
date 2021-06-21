@@ -1,0 +1,148 @@
+body {
+  font-family: $font-family;
+  line-height: 1.4;
+}
+
+h1, h2, h3 {
+
+  line-height: 1.2;
+}
+
+.container {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+a {
+  color: $color-navy;
+  text-decoration: none;
+  transition: 0.15s;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: $finger-size;
+  background-color: $color-blue;
+  color: white;
+  font-family: inherit;
+  border-radius: $border-radius;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+
+  &-full {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.text {
+  font-family: inherit;
+  border: 0;
+  height: $finger-size;
+  border-radius: $border-radius;
+  color: $color-navy;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 77%;
+
+  &::placeholder {
+    color: rgb($color-navy, .5) ;
+    
+  }
+}
+
+.select {
+  border: 0;
+  background-color: #fff;
+  font-family: inherit;
+  display: inline-block;
+  width: 100%;
+  border-radius: $border-radius;
+  height: $finger-size;
+  font-weight: bold;
+}
+
+.form-item {
+  position: relative;
+
+  .text {
+    padding-left: 40px;
+  }
+
+  i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color-navy;
+  
+  }
+
+  
+  
+
+  .select {
+    padding-left: 40px;
+  }
+}
+
+.form-description {
+  padding-top: 8px;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+
+ 
+}
+
+.checkbox {
+ 
+  position: relative;
+  display: flex;
+  
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    top:0;
+    left: 0;
+  
+  }
+
+ 
+
+&:before{
+  content:"";
+  display: inline-block;
+  font-size: 13px;
+  width: 1em;
+  height: 1em;
+  border: 2px solid white;
+
+}
+
+.tik{
+  display: none;
+  position: absolute;
+  left:50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 0px;
+  margin-left: 1px;
+}
+input:checked + .tik{
+
+  display: block;
+}
+
+}

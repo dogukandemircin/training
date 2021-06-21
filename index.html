@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header class="Header">
+      <div class="container">
+        <a class="Header-logo" href="">
+          <img src="img/site-logo.png" alt="" />
+        </a>
+
+        <button class="Header-menu-switch" type="button">
+          <i class="fas fa-align-justify"> </i>
+        </button>
+
+        <div class="Header-menu">
+          <div class="Header-menu-user">
+            <a href="">Register</a>
+            <a href="">Sign In</a>
+          </div>
+
+          <a class="Header-menu-property button" href="">List your property</a>
+
+          <div class="Header-menu-helper">
+            <select>
+              <option value="en">EN</option>
+            </select>
+
+            <select>
+              <option value="en">UAH</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="Navigation">
+      <div class="container">
+        <a class="Navigation-item"> Menu1 </a>
+        <a class="Navigation-item"> Menu2 </a>
+        <a class="Navigation-item"> Menu3 </a>
+        <a class="Navigation-item"> Menu4 </a>
+      </div>
+    </nav>
+
+    <main class="Main">
+      <section class="Showcase">
+        <div class="container">
+          <h1 class="Showcase-title">More deals than days in a year</h1>
+          <h3 class="Showcase-subtitle">From cosy country homes to funky city flats</h3>
+
+          <div class="Search">
+            <form class="Search-form" action="">
+              <div class="Search-form-item">
+                <div class="form-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <input class="text" type="text" placeholder="Location" />
+                </div>
+
+                <small class="form-description"
+                  >Destination,property name or address</small
+                >
+              </div>
+
+              <div class="Search-form-item">
+                <div class="form-item">
+                  <i class="fas fa-calendar-alt"></i>
+                 
+                  <input class="text" type="date" />
+                </div>
+                <small>When?</small>
+              </div>
+
+              <div class="Search-form-item">
+                <div class="form-item">
+                  <i class="fas fa-user"></i>
+                  <select class="select">
+                    <option value="">123</option>
+                  </select>
+                </div>
+              </div>
+              <div class="Search-form-item">
+                <button
+                  class="button button-full"
+                  style="background-color: #083887"
+                  type="button"
+                >
+                  Let's get started
+                </button>
+                <div class="for-work">
+                  <label class="form-checkbox">
+                    
+                    Are you travelling for work?
+                    <div>
+                      <div class="checkbox">
+                        <input type="checkbox">
+                        <i class="fas fa-check tik"></i></div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
