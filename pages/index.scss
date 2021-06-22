@@ -1,63 +1,83 @@
-.Showcase{
-    
-    color:white;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background: $color-navy url(img/showcase_back.jpg) no-repeat center center / cover;
-    text-align: center;
+.Showcase {
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: $color-navy url(img/showcase_back.jpg) no-repeat center center /
+    cover;
+  text-align: center;
 
+  @include mq("tablet") {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
 
-   
+  &-title {
+    @include mq("tablet") {
+      font-size: 3em;
+    }
+  }
 
-    &-subtitle{
-
+  &-subtitle {
     margin-top: 10px;
 
+    @include mq("tablet") {
+      font-size: 1.4em;
     }
-      
+  }
+}
+
+.Search {
+  margin-top: 30px;
+  background-color: $color-yellow;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgb(black, 0.2);
+  text-align: left;
+
+  @include mq("tablet") {
+    padding: 50px 30px;
+    margin-top: 50px;
+  }
+
+  &-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include mq("tablet") {
+      flex-direction: row;
     }
+
+    &-item {
+      width: 100%;
     
-    
-    .Search{
-        margin-top: 30px;
-        background-color: $color-yellow;
-        padding:20px;
-        box-shadow: 0 20px 40px rgb(black, .2);
-        text-align: left;
+      & + & {
+        margin-top: 20px;
 
-    
-        &-form{
-    
-            position: relative;
-            display: flex;
-            flex-direction: column;
-
-         
-        &-item{
-
-            
-
-            & + & {
-                margin-top: 20px;
-            }
+        @include mq("tablet") {
+          flex-grow: 1;
+          margin-top: 0;
+          margin-left: 10px;
         }
-
-
-
-        }
-          
-
-        .for-work{
-            font-size: $font-size-small;
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-           
-
-        }
-
-        .checkbox{
-            margin-left: 7px;
-        }
-        
+      }
     }
+  }
+
+  .for-work {
+    font-size: $font-size-small;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+    @include mq("tablet") {
+      position: absolute;
+      top: calc(#{$finger-size} + 20px);
+      right: 0;
+
+    }
+  }
+
+  .checkbox {
+    margin-left: 7px;
+  }
+}

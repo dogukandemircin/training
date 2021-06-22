@@ -43,6 +43,7 @@ a {
 }
 
 .text {
+  
   font-family: inherit;
   border: 0;
   height: $finger-size;
@@ -51,7 +52,10 @@ a {
   font-weight: bold;
   padding-left: 10px;
   padding-right: 10px;
-  width: 77%;
+  width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;g
 
   &::placeholder {
     color: rgb($color-navy, .5) ;
@@ -60,6 +64,7 @@ a {
 }
 
 .select {
+  
   border: 0;
   background-color: #fff;
   font-family: inherit;
@@ -74,6 +79,7 @@ a {
   position: relative;
 
   .text {
+   
     padding-left: 40px;
   }
 
@@ -95,7 +101,12 @@ a {
 }
 
 .form-description {
-  padding-top: 8px;
+ 
+  font-size: $font-size-small;
+
+  @include mq("tablet") {
+    margin-top: 20px;
+  }
 }
 
 .form-checkbox {
